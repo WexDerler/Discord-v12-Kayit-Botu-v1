@@ -2,4 +2,4 @@
 
 # Botu Editleyip Benimn diye gezenin Anasını Gö**en
 
-# Yardım Destek içi : WeX#0001
+# Yardım Destek için : WeX#0001
