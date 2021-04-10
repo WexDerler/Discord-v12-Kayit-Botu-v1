@@ -166,33 +166,8 @@ client.on("guildMemberAdd", member => {
 //-----------------------------------------------------------------------------------------------------------------------------------\\
 
 client.on("guildMemberAdd", async member => {
-  if (db.has(`otorol_${member.guild.id}`)) {
-    var rol = db.fetch(`otorol_${member.guild.id}`);
-
-    member.roles.add(rol);
-  } else {
-    return;
-  }
-
-  if (db.has(`logkanal_${member.guild.id}`)) {
-    var kanal = client.channels.cache.get(db.fetch(`logkanal_${member.guild.id}`));
-    let kisi = `${member.user.username}`
-    let roll = `<@&${rol}>`
-    const embed = new Discord.MessageEmbed()
-     .setTitle("✔️ Başarıyla Rol Verildi")
-     .addField("🏷️ Rol Verilen Kişi: ", member.user.tag)
-    .addField("🗂️ Verilen Rol: ", roll)
-    .setColor("RANDOM")
-    .setTimestamp()
-      //.setFooter(`Calm Down.. WeX Here 💗`);
-
-    kanal.send(embed);
-  } else {
-    return;
-  }
-});
-
-
+ member.roles.add("");//Otorol verilecek Rol ID
+}
 client.on("userUpdate", async (wex, yeni) => {
   var sunucu = client.guilds.cache.get(''); //[WeX]-Sunucu ID
   var uye = sunucu.members.cache.get(yeni.id);
